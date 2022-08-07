@@ -82,7 +82,11 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
     ```
 
 
-* **Ejercicio 3:** Título
+* **Ejercicio 3:** 
+
+    El método toString() del árbol, retorna lo siguiente. ¿Por qué están entre paréntesis ciertas claves?
+
+    Mostrar paso a paso el arbol-B al eliminar "www.espn.com":
   
     Descripción
     ```java
