@@ -84,9 +84,18 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
 
 * **Ejercicio 3:** 
 
-    El método toString() del árbol, retorna lo siguiente. ¿Por qué están entre paréntesis ciertas claves?
+    A. El método toString() del árbol, retorna lo siguiente. ¿Por qué están entre paréntesis ciertas claves?
 
-    Mostrar paso a paso el arbol-B al eliminar "www.espn.com":
+    Cuando se analiza el método <code>toString()</code> se puede notar que cuando se encuentra en una altura que sea mayor a 0 (nodos internos), se produce una iteración y se encuentra la siguiente condición.
+
+    ```java
+    if (j > 0)
+        s.append(indent + "(" + children[j].key + ")\n");
+    ```
+
+    Parte del código responsable de generar esta línea, entonces estas claves que aparecen en paréntesis son claves por donde se desciende en el árbol para imprimir el contenido total que tiene el árbol.
+
+    B. Mostrar paso a paso el arbol-B al eliminar "www.espn.com":
 
     * 1. Para realizar <code>delete("www.espn.com")</code> al igual que cuando insertamos se tiene que buscar el nodo con la clave que queremos eliminar.
   
