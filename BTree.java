@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class BTree<Key extends Comparable<Key>, Value> {
 
@@ -76,20 +77,22 @@ public class BTree<Key extends Comparable<Key>, Value> {
      *         and {@code null} if the key is not in the symbol table
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public Value get(Key key) {
+    public ArrayList<Value> get(Key key) {
         if (key == null)
             throw new IllegalArgumentException("argument to get() is null");
         return search(root, key, height);
     }
 
-    private Value search(Node x, Key key, int ht) {
+    private ArrayList<Value> search(Node x, Key key, int ht) {
         Entry[] children = x.children;
+        ArrayList<Value> data = new ArrayList<>();
 
         if (ht == 0) {
             for (int j = 0; j < x.m; j++) {
                 if (eq(key, children[j].key))
-                    return (Value) children[j].val;
+                    data.add((Value) children[j].val);
             }
+            return data;
         }
 
         else {
@@ -98,6 +101,7 @@ public class BTree<Key extends Comparable<Key>, Value> {
                     return search(children[j].next, key, ht - 1);
             }
         }
+
         return null;
     }
 

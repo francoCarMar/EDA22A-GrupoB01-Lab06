@@ -24,7 +24,15 @@ public class Test {
 
         // Ejemplo del uso del get
         // System.out.println("simpsons.com: " + st.get("www.simpsons.com"));
-
+        System.out.println("Comprobando ejercicio 1:");
+        System.out.println("A continuacion se obtiene el valor a partir de una llave proporcionada.");
+        System.out.println("cs.princeton.edu:  " + st.get("www.cs.princeton.edu"));
+        System.out.println("hardvarother.com: " + st.get("www.harvarother.com"));
+        System.out.println("simpsons.com:      " + st.get("www.simpsons.com"));
+        System.out.println("apple.com:         " + st.get("www.apple.com"));
+        System.out.println("ebay.com:          " + st.get("www.ebay.com"));
+        System.out.println("dell.com:          " + st.get("www.dell.com"));
+        System.out.println();
         // toString() del arbol
         System.out.println(st);
 
