@@ -151,43 +151,43 @@ ingresados.
     **Paso a paso**
     *  1. En estos 3 casos se da insercion directa.
   
-    	![imagen](img/1.png)
+    	![imagen](ejercicio2/1.png)
 
     * 2. Division y se promociona "princeton.edu".
 
-   	 ![imagen](img/2.png)
+   	 ![imagen](ejercicio2/2.png)
 
     * 3. Insercion directa de "simpsons.com"" y "apple.com".
     
-    	![imagen](img/3.png)
+    	![imagen](ejercicio2/3.png)
 	
     * 4. Se genera una division y se promociona "cs.princeton.edu".
   
-    	![imagen](img/4.png)
+    	![imagen](ejercicio2/4.png)
 
     * 5. Insercion directa.
 
-   	![imagen](img/5.png)
+   	![imagen](ejercicio2/5.png)
 
     * 6. Se genera una division y se promociona "google.edu".
     
-    	![imagen](img/6.png)
+    	![imagen](ejercicio2/6.png)
 
     * 7. Insercion directa.
     
-    	![imagen](img/7.png)    
+    	![imagen](ejercicio2/7.png)    
 
     * 8. Se promociona "ebay.com".
     
-    	![imagen](img/8.png)
+    	![imagen](ejercicio2/8.png)
 	
     * 9. Division se promociona "google.com".
     
-    	![imagen](img/9.png)
+    	![imagen](ejercicio2/9.png)
 	
     * 10. Insercion directa.
     
-    	![imagen](img/10.png)
+    	![imagen](ejercicio2/10.png)
 	
     Finalemente nos queda el siguiente diagrama de arbol:
     ![imagen](img/final.png)
@@ -209,64 +209,64 @@ ingresados.
 
     * 1. Para realizar <code>delete("www.espn.com")</code> al igual que cuando insertamos se tiene que buscar el nodo con la clave que queremos eliminar.
   
-    <img src="img/delete1.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete1.jpeg" style="width:90%; height:auto"/>
 
     * 2. Se empieza buscando el nodo a eliminar desde el nodo raíz (<code>root</code>), entonces se evalua el nodo con la clave <code>www.google.com</code> donde se evaluará por donde continuar la búsqueda.
 
-    <img src="img/delete2.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete2.jpeg" style="width:90%; height:auto"/>
 
     * 3. Internamente se realiza el <code>"www.espn.com".compareTo("www.google.com")</code> el cual nos dará por resultado un número negativo, indicando que se debe continuar por la izquierda.
     
-    <img src="img/delete3.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete3.jpeg" style="width:90%; height:auto"/>
 
     * 4. Luego tenemos un nodo que tiene 2 <code>Entry</code>, entonces se debe comparar la clave a buscar con las 2 claves que tenemos en este node. Entonces <code>"www.espn.com".compareTo("www.ebay.com")</code> nos resulta en un número positivo.
     
-    <img src="img/delete4.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete4.jpeg" style="width:90%; height:auto"/>
 
     * 5. Internamente se realiza un <code>"www.espn.com".compareTo("www.ebay.com")</code>, resultado positivo que nos indicaría que debemos seguir por la derecha.
     
-    <img src="img/delete5.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete5.jpeg" style="width:90%; height:auto"/>
 
     * 6. A este punto la altura a la que se encuentra es igual a 0, entonces se realizan <code>compareTo()</code> para encontrar la posición de la clave a eliminar
     
-    <img src="img/delete6.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete6.jpeg" style="width:90%; height:auto"/>
 
     * 7. Una vez se ha encontrado la posición de la clave se debe analizar si el nodo que queremos eliminar es un nodo interior o es una hoja, en este caso la clave <code>"www.espn.com"</code> es una hoja, por lo que podemos eliminarlo. Luego de eliminar se debe analizar si se realiza una redistribución o una unión dependiendo si el nodo se encuentra en un estado de underflow o se encuentra en overflow.
     
-    <img src="img/delete7.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete7.jpeg" style="width:90%; height:auto"/>
 
     * 8. En este caso se realiza una unión debido a que el nodo en el que se acaba de eliminar esta en un estado de underflow, resultando de la siguiente forma.
     
-    <img src="img/delete8.jpeg" style="width:90%; height:auto"/>
+    <img src="ejercicio3/delete8.jpeg" style="width:90%; height:auto"/>
     
 * **Ejercicio 4:** Inserción de un nuevo nodo (www.youtube.com)
 * 1. Para realizar <code>put("www.youtube.com")</code> empezamos buscando el nodo apropiado para su inserción
   
-    <img src="img/ejercicio4/insert1.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert1.png" style="width:90%; height:auto"/>
 
     * 2. Se empieza desde el nodo raíz (<code>root</code>).
 
-    <img src="img/ejercicio4/insert2.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert2.png" style="width:90%; height:auto"/>
 
     * 3. Se realizan las comparaciones necesarias entre la clave y la raiz, resultado en tomar la dirección derecha de la raíz
     
-    <img src="img/ejercicio4/insert3.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert3.png" style="width:90%; height:auto"/>
 
     * 4. Llegados a este nodo, es necesario establecer las comparaciones con la mayoría de ellos, para así establecer una correcta dirección
     
-    <img src="img/ejercicio4/insert4.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert4.png" style="width:90%; height:auto"/>
 
     * 5. Realizadas las comparaciones, es necesario definir la dirección adecuada, esto por medio de la comparación con ("www.yahoo.com"), dirigiendo entonces por su lado derecho
     
-    <img src="img/ejercicio4/insert5.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert5.png" style="width:90%; height:auto"/>
 
     * 6. A este punto la altura a la que se encuentra es igual a 0, entonces se realizan <code>compareTo()</code> para encontrar la posición adecuada para nuestra clave
     
-    <img src="img/ejercicio4/insert6.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert6.png" style="width:90%; height:auto"/>
 
     * 7. El resultado final es:
     
-    <img src="img/ejercicio4/insert7.png" style="width:90%; height:auto"/>
+    <img src="ejercicio4/insert7.png" style="width:90%; height:auto"/>
     
 II. CONCLUSIONES
 	
