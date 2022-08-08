@@ -97,16 +97,97 @@ ingresados.
     st.put("www.weather.com", "63.111.66.11");
     st.put("www.yahoo.com", "216.109.118.65");
     ```
-    Nos queda el siguiente diagrama de arbol:
-    ![imagen](img/imgE2.png)
-
-* **Ejercicio 3:** Título
+    **Paso a paso**
+    *  1. En estos 3 casos se da insercion directa.
   
-    Descripción
+    	![imagen](img/1.png)
+
+    * 2. Division y se promociona "princeton.edu".
+
+   	 ![imagen](img/2.png)
+
+    * 3. Insercion directa de "simpsons.com"" y "apple.com".
+    
+    	![imagen](img/3.png)
+	
+    * 4. Se genera una division y se promociona "cs.princeton.edu".
+  
+    	![imagen](img/4.png)
+
+    * 5. Insercion directa.
+
+   	![imagen](img/5.png)
+
+    * 6. Se genera una division y se promociona "google.edu".
+    
+    	![imagen](img/6.png)
+
+    * 7. Insercion directa.
+    
+    	![imagen](img/7.png)    
+
+    * 8. Se promociona "ebay.com".
+    
+    	![imagen](img/8.png)
+	
+    * 9. Division se promociona "google.com".
+    
+    	![imagen](img/9.png)
+	
+    * 10. Insercion directa.
+    
+    	![imagen](img/10.png)
+	
+    Finalemente nos queda el siguiente diagrama de arbol:
+    ![imagen](img/final.png)
+
+* **Ejercicio 3:** 
+
+    A. El método toString() del árbol, retorna lo siguiente. ¿Por qué están entre paréntesis ciertas claves?
+
+    Cuando se analiza el método <code>toString()</code> se puede notar que cuando se encuentra en una altura que sea mayor a 0 (nodos internos), se produce una iteración y se encuentra la siguiente condición.
+
     ```java
-    //Código resaltante
+    if (j > 0)
+        s.append(indent + "(" + children[j].key + ")\n");
     ```
 
+    Parte del código responsable de generar esta línea, entonces estas claves que aparecen en paréntesis son claves por donde se desciende en el árbol para imprimir el contenido total que tiene el árbol.
+
+    B. Mostrar paso a paso el arbol-B al eliminar "www.espn.com":
+
+    * 1. Para realizar <code>delete("www.espn.com")</code> al igual que cuando insertamos se tiene que buscar el nodo con la clave que queremos eliminar.
+  
+    <img src="img/delete1.jpeg" style="width:90%; height:auto"/>
+
+    * 2. Se empieza buscando el nodo a eliminar desde el nodo raíz (<code>root</code>), entonces se evalua el nodo con la clave <code>www.google.com</code> donde se evaluará por donde continuar la búsqueda.
+
+    <img src="img/delete2.jpeg" style="width:90%; height:auto"/>
+
+    * 3. Internamente se realiza el <code>"www.espn.com".compareTo("www.google.com")</code> el cual nos dará por resultado un número negativo, indicando que se debe continuar por la izquierda.
+    
+    <img src="img/delete3.jpeg" style="width:90%; height:auto"/>
+
+    * 4. Luego tenemos un nodo que tiene 2 <code>Entry</code>, entonces se debe comparar la clave a buscar con las 2 claves que tenemos en este node. Entonces <code>"www.espn.com".compareTo("www.ebay.com")</code> nos resulta en un número positivo.
+    
+    <img src="img/delete4.jpeg" style="width:90%; height:auto"/>
+
+    * 5. Internamente se realiza un <code>"www.espn.com".compareTo("www.ebay.com")</code>, resultado positivo que nos indicaría que debemos seguir por la derecha.
+    
+    <img src="img/delete5.jpeg" style="width:90%; height:auto"/>
+
+    * 6. A este punto la altura a la que se encuentra es igual a 0, entonces se realizan <code>compareTo()</code> para encontrar la posición de la clave a eliminar
+    
+    <img src="img/delete6.jpeg" style="width:90%; height:auto"/>
+
+    * 7. Una vez se ha encontrado la posición de la clave se debe analizar si el nodo que queremos eliminar es un nodo interior o es una hoja, en este caso la clave <code>"www.espn.com"</code> es una hoja, por lo que podemos eliminarlo. Luego de eliminar se debe analizar si se realiza una redistribución o una unión dependiendo si el nodo se encuentra en un estado de underflow o se encuentra en overflow.
+    
+    <img src="img/delete7.jpeg" style="width:90%; height:auto"/>
+
+    * 8. En este caso se realiza una unión debido a que el nodo en el que se acaba de eliminar esta en un estado de underflow, resultando de la siguiente forma.
+    
+    <img src="img/delete8.jpeg" style="width:90%; height:auto"/>
+    
 * **Ejercicio 4:** Inserción de un nuevo nodo (www.youtube.com)
 * 1. Para realizar <code>put("www.youtube.com")</code> empezamos buscando el nodo apropiado para su inserción
   
@@ -138,10 +219,10 @@ ingresados.
     
 II. CONCLUSIONES
 	
-- 
-- 
-- 
-- 
+- Los árboles B tienen ventajas sustanciales sobre otras implementaciones cuando el tiempo de acceso a los nodos excede al tiempo de acceso entre nodos.
+- Todos los bloques están llenos en un 75% en promedio, aprobechamiento de espacio
+- El desempeño es bueno para tablas pequeñas y grandes y no se degrada cuando la tabla crece.
+- Inserciones, modificaciones y eliminaciones son eficientes, y se mantiene el orden de las claves para una recuperación rápida
 
 ---
     
