@@ -101,19 +101,19 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
   
     <img src="img/delete1.jpeg" style="width:90%; height:auto"/>
 
-    * 2. Se empieza buscando el nodo a eliminar desde el nodo raíz (<code>root</code>), entonces se evalua el nodo con la clave <code>www.cs.princeton.edu</code> donde se evaluará por donde continuar la búsqueda.
+    * 2. Se empieza buscando el nodo a eliminar desde el nodo raíz (<code>root</code>), entonces se evalua el nodo con la clave <code>www.google.com</code> donde se evaluará por donde continuar la búsqueda.
 
     <img src="img/delete2.jpeg" style="width:90%; height:auto"/>
 
-    * 3. Internamente se realiza el <code>"www.espn.com".compareTo("www.cs.princeton.edu")</code> el cual nos dará por resultado un número positivo, indicando que se debe continuar por la derecha.
+    * 3. Internamente se realiza el <code>"www.espn.com".compareTo("www.google.com")</code> el cual nos dará por resultado un número negativo, indicando que se debe continuar por la izquierda.
     
     <img src="img/delete3.jpeg" style="width:90%; height:auto"/>
 
-    * 4. Luego tenemos un nodo que tiene 3 <code>Entry</code>, entonces se debe comparar la clave a buscar con las 3 claves que tenemos en este node. Debido a que <code>"www.espn.com".compareTo("www.google.com")</code> nos resulta en un número negativo, no hay necesidad de seguir comparando con las otras dos claves.
+    * 4. Luego tenemos un nodo que tiene 2 <code>Entry</code>, entonces se debe comparar la clave a buscar con las 2 claves que tenemos en este node. Entonces <code>"www.espn.com".compareTo("www.ebay.com")</code> nos resulta en un número positivo.
     
     <img src="img/delete4.jpeg" style="width:90%; height:auto"/>
 
-    * 5. Internamente se realiza un <code>"www.espn.com".compareTo("www.google.com")</code>, resultado negativo que nos indicaría que debemos seguir por la izquierda.
+    * 5. Internamente se realiza un <code>"www.espn.com".compareTo("www.ebay.com")</code>, resultado positivo que nos indicaría que debemos seguir por la derecha.
     
     <img src="img/delete5.jpeg" style="width:90%; height:auto"/>
 
@@ -125,7 +125,7 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
     
     <img src="img/delete7.jpeg" style="width:90%; height:auto"/>
 
-    * 8. En este caso no se tiene que realizar ningún movimiento (redistribución o unión), entonces simplemente se elimina.
+    * 8. En este caso se realiza una unión debido a que el nodo en el que se acaba de eliminar esta en un estado de underflow, resultando de la siguiente forma.
     
     <img src="img/delete8.jpeg" style="width:90%; height:auto"/>
     
