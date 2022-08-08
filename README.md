@@ -98,7 +98,7 @@ ingresados.
     st.put("www.yahoo.com", "216.109.118.65");
     ```
     Nos queda el siguiente diagrama de arbol:
-    ![imagen](img/imgE2.png)
+    ![imagen](img/final.png)
 
 * **Ejercicio 3:** Título
   
