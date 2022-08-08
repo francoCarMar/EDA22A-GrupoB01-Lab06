@@ -62,12 +62,21 @@
 I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
 * La organización del repositorio es la siguiente
     ```sh
-    .
-    ├── img
-        ├──...
-    ├── BTree.java
-    ├── Test.java
-    └── README.md
+	.
+	├── BTree.java
+	├── ejercicio1
+	│   └── ejecucion.jpeg
+	├── ejercicio2
+	│   ├── imagenes
+	│   └── final.png
+	├── ejercicio3
+	│   ├── imagenes
+	│   └── delete8.jpeg
+	├── ejercicio4
+	│   ├── imagenes
+	│   └── insert7.png
+	├── README.md
+	└── Test.java
     ```
   * **Nota :** Para los ver los ejercicios propuestos deberá compilar y ejecutar "Test.java".
 * **Ejercicio 1:** MODIFICAR EL MÉTODO GET Y SEARCH PARA QUE DEVUELVA TODAS LAS CLAVES
@@ -127,7 +136,7 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
 	```
 Ejecucion:
 				    
-	![imagen](ejercicio1/ejecucion.jpeg)
+ ![imagen](ejercicio1/ejecucion.jpeg)
 				    
 * **Ejercicio 2:** Mostrar en un diagrama de árbol gráficamente la estructura final para los datos
 ingresados.
