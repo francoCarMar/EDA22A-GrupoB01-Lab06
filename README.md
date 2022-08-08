@@ -63,6 +63,8 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
 * La organización del repositorio es la siguiente
     ```sh
     .
+    ├── img
+        ├──...
     ├── BTree.java
     ├── Test.java
     └── README.md
