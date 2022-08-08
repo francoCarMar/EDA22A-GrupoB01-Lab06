@@ -118,7 +118,7 @@ ingresados.
 
    	![imagen](img/5.png)
 
-    * 6. Se genera una division y se promociona "www.google.edu".
+    * 6. Se genera una division y se promociona "google.edu".
     
     	![imagen](img/6.png)
 
@@ -126,11 +126,11 @@ ingresados.
     
     	![imagen](img/7.png)    
 
-    * 8. Se promociona "www.ebay.com".
+    * 8. Se promociona "ebay.com".
     
     	![imagen](img/8.png)
 	
-    * 9. Division se promociona "www.google.com".
+    * 9. Division se promociona "google.com".
     
     	![imagen](img/9.png)
 	
