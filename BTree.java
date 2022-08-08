@@ -29,7 +29,7 @@ public class BTree<Key extends Comparable<Key>, Value> {
 
         public Entry(Comparable key, Object val, Node next) {
             this.key = key;
-            this.val = val;
+            add(val);
             this.next = next;
         }
         public void add(Object val) {
@@ -141,6 +141,7 @@ public class BTree<Key extends Comparable<Key>, Value> {
                 if (eq(key, h.children[j].key)) {
                     t.add((Object) val);
                     h.children[j].add((Object) val);
+                }
                 if (less(key, h.children[j].key))
                     break;
             }
