@@ -97,7 +97,48 @@ ingresados.
     st.put("www.weather.com", "63.111.66.11");
     st.put("www.yahoo.com", "216.109.118.65");
     ```
-    Nos queda el siguiente diagrama de arbol:
+    **Paso a paso**
+    *  1. En estos 3 casos se da insercion directa.
+  
+    	![imagen](img/1.png)
+
+    * 2. Division y se promociona "princeton.edu".
+
+   	 ![imagen](img/2.png)
+
+    * 3. Insercion directa de "simpsons.com"" y "apple.com".
+    
+    	![imagen](img/3.png)
+	
+    * 4. Se genera una division y se promociona "cs.princeton.edu".
+  
+    	![imagen](img/4.png)
+
+    * 5. Insercion directa.
+
+   	![imagen](img/5.png)
+
+    * 6. Se genera una division y se promociona "www.google.edu".
+    
+    	![imagen](img/6.png)
+
+    * 7. Insercion directa.
+    
+    	![imagen](img/7.png)    
+
+    * 8. Se promociona "www.ebay.com".
+    
+    	![imagen](img/8.png)
+	
+    * 9. Division se promociona "www.google.com".
+    
+    	![imagen](img/9.png)
+	
+    * 10. Insercion directa.
+    
+    	![imagen](img/10.png)
+	
+    Finalemente nos queda el siguiente diagrama de arbol:
     ![imagen](img/final.png)
 
 * **Ejercicio 3:** Título
