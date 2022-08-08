@@ -203,7 +203,7 @@ ingresados.
     	![imagen](ejercicio2/10.png)
 	
     Finalemente nos queda el siguiente diagrama de arbol:
-    ![imagen](img/final.png)
+    ![imagen](ejercicio2/final.png)
 
 * **Ejercicio 3:** 
 
