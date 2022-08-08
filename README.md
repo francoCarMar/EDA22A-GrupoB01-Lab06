@@ -125,6 +125,10 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
 	...  
 	}
 	```
+Ejecucion:
+				    
+	![imagen](ejercicio1/ejecucion.jpeg)
+				    
 * **Ejercicio 2:** Mostrar en un diagrama de árbol gráficamente la estructura final para los datos
 ingresados.
      
