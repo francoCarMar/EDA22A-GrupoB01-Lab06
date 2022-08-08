@@ -68,7 +68,19 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
     └── README.md
     ```
   * **Nota :** Para los ver los ejercicios propuestos deberá compilar y ejecutar "Test.java".
-* **Ejercicio 1:** Título
+* **Ejercicio 1:** MODIFICAR EL MÉTODO GET Y SEARCH PARA QUE DEVUELVA TODAS LAS CLAVES
+	La idea fue crear un arraylist donde se almacene la data y quitar el return para que no solo devuelva siempre el primer elemento encontrado
+	 ```java
+     ArrayList<Value> data = new ArrayList<>();
+
+        if (ht == 0) {
+            for (int j = 0; j < x.m; j++) {
+                if (eq(key, children[j].key))
+                    data.add((Value) children[j].val);
+            }
+            return data;
+        }
+    ```
 	
   Descripción
   ```java
