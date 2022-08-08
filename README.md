@@ -150,10 +150,10 @@ ingresados.
 
 II. CONCLUSIONES
 	
-- 
-- 
-- 
-- 
+- Los árboles B tienen ventajas sustanciales sobre otras implementaciones cuando el tiempo de acceso a los nodos excede al tiempo de acceso entre nodos.
+- Todos los bloques están llenos en un 75% en promedio, aprobechamiento de espacio
+- El desempeño es bueno para tablas pequeñas y grandes y no se degrada cuando la tabla crece.
+- Inserciones, modificaciones y eliminaciones son eficientes, y se mantiene el orden de las claves para una recuperación rápida
 
 ---
     
