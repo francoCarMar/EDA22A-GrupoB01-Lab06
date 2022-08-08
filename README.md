@@ -82,12 +82,7 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
             }
             return data;
         }
-    ```
-	
-  Descripción
-  ```java
-  //Código resaltante
-  ```    
+    ``` 
 * **Ejercicio 2:** Mostrar en un diagrama de árbol gráficamente la estructura final para los datos
 ingresados.
      
