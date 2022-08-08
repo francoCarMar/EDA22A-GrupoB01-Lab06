@@ -71,18 +71,60 @@ I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS <br>
     ```
   * **Nota :** Para los ver los ejercicios propuestos deberá compilar y ejecutar "Test.java".
 * **Ejercicio 1:** MODIFICAR EL MÉTODO GET Y SEARCH PARA QUE DEVUELVA TODAS LAS CLAVES
-	La idea fue crear un arraylist donde se almacene la data y quitar el return para que no solo devuelva siempre el primer elemento encontrado
-	 ```java
-     ArrayList<Value> data = new ArrayList<>();
-
-        if (ht == 0) {
-            for (int j = 0; j < x.m; j++) {
-                if (eq(key, children[j].key))
-                    data.add((Value) children[j].val);
-            }
-            return data;
-        }
-    ``` 
+	Como una posible solución se plantea modificar la estructura de la clase <code>Entry</code> para que, en lugar de
+	solamente tener un valor, pueda tener tantos como se fueran añadiendo
+	
+	```java
+	private static class Entry {
+	...
+	    private ArrayList<Object> val = new ArrayList<>();
+	    private Node next; // permite iterar sobre el arreglo de entradas
+		
+	    public Entry(Comparable key, Object val, Node next) {
+	        this.key = key;
+	        add(val);
+	        this.next = next;
+	    }
+	    public void add(Object val) {
+		this.val.add(val);
+	    }
+	...
+	}
+	```
+	
+	Estas modificaciones afectan tambien a los metodos de búsqueda e inserción
+	```java
+	...
+	public ArrayList<Value> get(Key key) {
+	...
+	}
+	private ArrayList<Value> search(Node x, Key key, int ht) {
+	...
+	    if (ht == 0) {
+	        for (int j = 0; j < x.m; j++) {
+	            if (eq(key, children[j].key))
+		        return (ArrayList<Value>) children[j].val;
+ 		    }
+ 	        }
+	    }
+	...
+	}
+	...
+	private Node insert(Node h, Key key, Value val, int ht) {
+	...
+	    if (ht == 0) {
+		for (j = 0; j < h.m; j++) {
+		    if (eq(key, h.children[j].key)) {
+                        t.add((Object) val);
+			h.children[j].add((Object) val);
+		    }
+		    if (less(key, h.children[j].key))
+		    break;
+		}
+	    }
+	...  
+	}
+	```
 * **Ejercicio 2:** Mostrar en un diagrama de árbol gráficamente la estructura final para los datos
 ingresados.
      
