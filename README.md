@@ -188,7 +188,35 @@ ingresados.
     
     <img src="img/delete8.jpeg" style="width:90%; height:auto"/>
     
+* **Ejercicio 4:** Inserción de un nuevo nodo (www.youtube.com)
+* 1. Para realizar <code>put("www.youtube.com")</code> empezamos buscando el nodo apropiado para su inserción
+  
+    <img src="img/ejercicio4/insert1.png" style="width:90%; height:auto"/>
 
+    * 2. Se empieza desde el nodo raíz (<code>root</code>).
+
+    <img src="img/ejercicio4/insert2.png" style="width:90%; height:auto"/>
+
+    * 3. Se realizan las comparaciones necesarias entre la clave y la raiz, resultado en tomar la dirección derecha de la raíz
+    
+    <img src="img/ejercicio4/insert3.png" style="width:90%; height:auto"/>
+
+    * 4. Llegados a este nodo, es necesario establecer las comparaciones con la mayoría de ellos, para así establecer una correcta dirección
+    
+    <img src="img/ejercicio4/insert4.png" style="width:90%; height:auto"/>
+
+    * 5. Realizadas las comparaciones, es necesario definir la dirección adecuada, esto por medio de la comparación con ("www.yahoo.com"), dirigiendo entonces por su lado derecho
+    
+    <img src="img/ejercicio4/insert5.png" style="width:90%; height:auto"/>
+
+    * 6. A este punto la altura a la que se encuentra es igual a 0, entonces se realizan <code>compareTo()</code> para encontrar la posición adecuada para nuestra clave
+    
+    <img src="img/ejercicio4/insert6.png" style="width:90%; height:auto"/>
+
+    * 7. El resultado final es:
+    
+    <img src="img/ejercicio4/insert7.png" style="width:90%; height:auto"/>
+    
 II. CONCLUSIONES
 	
 - Los árboles B tienen ventajas sustanciales sobre otras implementaciones cuando el tiempo de acceso a los nodos excede al tiempo de acceso entre nodos.
