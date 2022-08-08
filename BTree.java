@@ -24,13 +24,16 @@ public class BTree<Key extends Comparable<Key>, Value> {
 
     private static class Entry {
         private Comparable key;
-        private Object val;
+        private ArrayList<Object> val = new ArrayList<>();
         private Node next; // permite iterar sobre el arreglo de entradas
 
         public Entry(Comparable key, Object val, Node next) {
             this.key = key;
             this.val = val;
             this.next = next;
+        }
+        public void add(Object val) {
+            this.val.add(val);
         }
     }
 
@@ -85,14 +88,12 @@ public class BTree<Key extends Comparable<Key>, Value> {
 
     private ArrayList<Value> search(Node x, Key key, int ht) {
         Entry[] children = x.children;
-        ArrayList<Value> data = new ArrayList<>();
 
         if (ht == 0) {
             for (int j = 0; j < x.m; j++) {
                 if (eq(key, children[j].key))
-                    data.add((Value) children[j].val);
+                    return (ArrayList<Value>) children[j].val;
             }
-            return data;
         }
 
         else {
@@ -137,6 +138,9 @@ public class BTree<Key extends Comparable<Key>, Value> {
 
         if (ht == 0) {
             for (j = 0; j < h.m; j++) {
+                if (eq(key, h.children[j].key)) {
+                    t.add((Object) val);
+                    h.children[j].add((Object) val);
                 if (less(key, h.children[j].key))
                     break;
             }
